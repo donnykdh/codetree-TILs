@@ -1,0 +1,10 @@
+#include <iostream>
+
+int main() {
+    int a, b, c;
+    a = 7;
+    b = 12;
+    c = 30;
+    cout << a << " + " << b << " = " << c << endl;
+    return 0;
+}
