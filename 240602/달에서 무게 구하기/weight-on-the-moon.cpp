@@ -3,16 +3,12 @@ using namespace std;
 
 int main() {
 
+    int a = 13;
+  	double b = 0.165;
+	
 	cout << fixed;
-
-	double a = 33.567268;
-
-	cout.precision(4);
-	cout << a << endl;
-
-	cout.precision(2);
-	cout << a << endl;
-
-	return 0;
-
+	cout.precision(6);
+    
+    cout << a << " * " << b << " = " << a * b;
+    return 0;
 }
