@@ -6,7 +6,7 @@ int main() {
     int arr[100];
     int num;    // 문제 유형 번호
     int a, b, s, e;
-    int go = 0;
+
 
     cin >> n >> q;
     for(int i = 0; i < n; i++){
@@ -19,6 +19,7 @@ int main() {
             cin >> a;
             cout << arr[a - 1] << endl;
         }else if (num == 2){
+            int go = 0;
             cin >> b;
             for(int j = 0; j < n; j++){
                 if (arr[j] == b){
