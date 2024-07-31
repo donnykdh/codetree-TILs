@@ -11,7 +11,7 @@ class User{
             this -> id = id;
             this level = level;
         }
-}
+};
 
 
 int main(){
