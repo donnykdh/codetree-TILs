@@ -9,7 +9,7 @@ class User{
         int level;
         User(string id = "", int level = 0){
             this -> id = id;
-            this level = level;
+            this -> level = level;
         }
 };
 
