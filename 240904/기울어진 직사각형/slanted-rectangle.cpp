@@ -3,86 +3,90 @@ using namespace std;
 
 int n;
 int arr[20][20];
+int sum;
+int k1, k2;
 int MAX = 0;
 
-bool range(int i, int j) {
+bool range(int i, int j){
     return i >= 0 && i < n && j >= 0 && j < n;
 }
 
-// 4번째 방향: 대각선 ↘
-int Fourth(int i, int j, int k1, int k2, int sum) {
-    if (range(i + k2, j + k2)) {
-        for (int a = 1; a <= k2; a++) {
+void Fourth(int i, int j,int k1, int k2){
+    if(range((i+k2), (j+k2))){
+    for(int a = 1; a <= k2; a++){
+       
             sum += arr[i + a][j + a];
-        }
-    } else {
-        return 0;
     }
-    return sum;
+    
+    //return sum;
+    }
+    else{sum = 0;}
 }
 
-// 3번째 방향: 대각선 ↙
-int Third(int i, int j, int k1, int k2, int sum) {
-    if (range(i + k1, j - k1)) {
-        for (int a = 1; a <= k1; a++) {
+void Third(int i, int j, int k1, int k2){
+    if(range((i+k1), (j-k1))){
+    for(int a = 1; a <= k1; a++){
+        
             sum += arr[i + a][j - a];
-        }
-    } else {
-        return 0;
     }
-    return Fourth(i + k1, j - k1, k1, k2, sum);
+    Fourth((i+k1), (j-k1), k1, k2);
+    }
+    else{sum = 0;}
 }
 
-// 2번째 방향: 대각선 ↖
-int Second(int i, int j, int k1, int k2, int sum) {
-    if (range(i - k2, j - k2)) {
-        for (int a = 1; a <= k2; a++) {
+void Second(int i, int j, int k1, int k2){
+    if(range((i-k2), (j-k2))){
+
+    for(int a = 1; a <= k2; a++){
             sum += arr[i - a][j - a];
-        }
-    } else {
-        return 0;
     }
-    return Third(i - k2, j - k2, k1, k2, sum);
+    Third((i-k2), (j-k2), k1, k2);
+    }
+    else{sum = 0;}
 }
 
-// 1번째 방향: 대각선 ↗
-int First(int i, int j, int k1, int k2) {
-    int sum = 0;
-    if (range(i - k1, j + k1)) {
-        for (int a = 1; a <= k1; a++) {
+void First(int i, int j, int k1, int k2){
+    sum = 0;
+    if(range((i-k1), (j+k1))){
+        for(int a = 1; a <= k1; a++){
+            
             sum += arr[i - a][j + a];
         }
-    } else {
-        return 0;
+        Second((i-k1), (j+k1), k1, k2);
     }
-    return Second(i - k1, j + k1, k1, k2, sum);
+    else{sum = 0;}
 }
+
+
+
+
 
 int main() {
     cin >> n;
-    
-    // 배열 입력
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
             cin >> arr[i][j];
         }
     }
 
     // 시작점
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            for (int k1 = 1; k1 < n; k1++) {
-                for (int k2 = 1; k2 < n; k2++) {
-                    int sum = First(i, j, k1, k2);
-                    if (sum > MAX) {
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            for(k1 = 1; k1 < n; k1++){
+                for(k2 = 1; k2 < n; k2++){
+                    First(i, j, k1, k2);
+                    if(sum > MAX){
                         MAX = sum;
+               
                     }
                 }
             }
         }
     }
-    
-    cout << MAX << endl;
 
+    //cout << k1 << endl << k2 <<endl;
+    cout << MAX <<endl;
+
+    
     return 0;
 }
