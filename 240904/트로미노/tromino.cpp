@@ -12,7 +12,7 @@ int firstCase(int a, int b){
     for(int i = 0; i < 2; i++){
         for(int j = 0; j < 2; j++){
             if(a+i >= n || b+j >= m){
-                break;
+                return 0;
             }
             if(arr[a+i][b+j] <= MIN){
                 MIN = arr[a+i][b+j];
