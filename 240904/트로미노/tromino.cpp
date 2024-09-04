@@ -11,7 +11,7 @@ int firstCase(int a, int b){
     int sum = 0;
     for(int i = 0; i < 2; i++){
         for(int j = 0; j < 2; j++){
-            if(a+i >= n || b+j >=m){
+            if(a+i >= n || b+j >= m){
                 break;
             }
             if(arr[a+i][b+j] <= MIN){
@@ -25,7 +25,7 @@ int firstCase(int a, int b){
 
 int secondCase(int a, int b){
     int sum = 0;
-    if(b + 1 >= n || b + 2 >= m){
+    if(b + 1 >= m || b + 2 >= m){
         return 0;
     }
     else{
@@ -35,7 +35,7 @@ int secondCase(int a, int b){
 
 int thirdCase(int a, int b){
     int sum = 0;
-    if(a + 1 >= n || a + 2 >= m){
+    if(a + 1 >= n || a + 2 >= n){
         return 0;
     }
     else{
