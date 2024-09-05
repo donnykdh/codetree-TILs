@@ -53,7 +53,7 @@ int main() {
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
             if(canGo(i, j)){
-                visited[i][j] == 1;
+                visited[i][j] = 1;
                 cnt = 1;
                 DFS(i, j);
 
@@ -64,7 +64,7 @@ int main() {
 
     sort(ans.begin(), ans.end());
 
-    cout << (int)ans.size() << endl << endl;
+    cout << (int)ans.size() << endl;
     for(int i = 0; i < (int)ans.size(); i++){
         cout << ans[i] << endl;
     }
