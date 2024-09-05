@@ -2,7 +2,7 @@
 using namespace std;
 
 int map[100][100];
-bool visited[100][100];
+int visited[100][100];
 
 int n, m;
 
