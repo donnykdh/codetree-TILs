@@ -7,7 +7,7 @@ bool visited[100][100];
 int n, m;
 
 bool range(int i, int j){
-    return i >=0 && i < n && j >= 0 && j < n; 
+    return i >=0 && i < n && j >= 0 && j < m; 
 }
 
 bool canGo(int i, int j){
