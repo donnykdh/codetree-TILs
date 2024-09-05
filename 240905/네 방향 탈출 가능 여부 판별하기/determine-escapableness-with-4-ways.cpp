@@ -60,7 +60,7 @@ int main(){
 
     BFS();
 
-    cout << visited[n-1][n-1] << endl;
+    cout << visited[n-1][m-1] << endl;
 
     return 0;
 }
