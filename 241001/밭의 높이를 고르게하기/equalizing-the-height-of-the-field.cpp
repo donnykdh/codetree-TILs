@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <climits>
 #include <cmath>
 
 using namespace std;
@@ -16,7 +17,7 @@ int main() {
         cin >> heights[i];
     }
     
-    int min_cost = 100;
+    int min_cost = INT_MAX;
 
     // 슬라이딩 윈도우로 길이가 T인 모든 구간을 탐색
     for (int i = 0; i <= N - T; i++) {
