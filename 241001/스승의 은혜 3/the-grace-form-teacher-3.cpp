@@ -42,10 +42,10 @@ int main() {
         if(cnt > MAX){
             MAX = cnt;
         }
-         price[i].first *= 2;
+        price[i].first *= 2;
     }
 
-    cout << MAX+1 << endl;
+    cout << MAX << endl;
 
     
     
