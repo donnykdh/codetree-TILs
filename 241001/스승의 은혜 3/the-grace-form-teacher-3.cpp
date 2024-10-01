@@ -44,7 +44,7 @@ int main() {
 
     }
 
-    cout << MAX+1 << endl;
+    cout << MAX << endl;
 
     
     
