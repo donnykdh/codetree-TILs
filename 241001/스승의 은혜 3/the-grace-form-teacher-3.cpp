@@ -33,18 +33,19 @@ int main() {
         for(int j = 0; j < n; j++){
             total_sum += price[j].first + price[j].second;
             if(total_sum > b){
-                cnt = j;
+                
                 break;
             }
+            cnt = j;
             
         }
         if(cnt > MAX){
             MAX = cnt;
         }
-
+         price[i].first *= 2;
     }
 
-    cout << MAX << endl;
+    cout << MAX+1 << endl;
 
     
     
