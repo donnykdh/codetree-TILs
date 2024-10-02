@@ -26,6 +26,7 @@ int main() {
     cin >> m1 >> d1 >> m2 >> d2;
     cin >> day;
     int ans = 0;
+    
     int a;
     for(int i = 0; i < 7; i++){
         if(day == day_of_week[i]){
@@ -37,6 +38,9 @@ int main() {
     int diff = NumOfDays(m2, d2) - NumOfDays(m1, d1);
 
     ans = diff / 7;
+    if(day == "Mon"){
+        ans++;
+    }
     if(diff % 7 <= a){
         ans++;
     }
