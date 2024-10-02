@@ -38,7 +38,7 @@ int main() {
     int diff = NumOfDays(m2, d2) - NumOfDays(m1, d1);
 
     ans = diff / 7;
-    if(day == "Mon"){
+    if(ans == 0 && day == "Mon"){
         ans++;
     }
     if(diff % 7 <= a){
