@@ -22,7 +22,8 @@ int main() {
         }      
     }
     for(int i = 0; i < cnt; i++){
-        dec += pow(a, i);
+        
+        dec += nums[i] * pow(a, i);
     }
 
     //cout << dec<< endl;
