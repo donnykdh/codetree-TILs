@@ -35,7 +35,7 @@ int main() {
         }
     }
 
-    int diff = NumOfDays(m2, d2) - NumOfDays(m1, d1)+1;
+    int diff = NumOfDays(m2, d2) - NumOfDays(m1, d1);
 
     ans = diff / 7;
     //cout << diff << endl;
