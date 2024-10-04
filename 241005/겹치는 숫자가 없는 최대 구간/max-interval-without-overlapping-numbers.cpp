@@ -3,8 +3,8 @@
 using namespace std;
 
 int n;
-int arr[100000];
-int counts[100000];
+int arr[100001];
+int counts[100001]={};
 
 int main() {
     
@@ -22,7 +22,11 @@ int main() {
             j++;
         }
 
-        ans = max(ans, j - i + 1);
+        //ans = max(ans, j - i + 1);
+
+        if((j-i+1) > ans){
+            ans = j-i+1;
+        }
 
         counts[arr[i]]--;
 
