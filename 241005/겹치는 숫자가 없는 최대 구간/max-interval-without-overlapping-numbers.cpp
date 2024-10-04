@@ -3,8 +3,8 @@
 using namespace std;
 
 int n;
-int arr[100001];
-int counts[100001]={};
+int arr[100000];
+int counts[100000]={};
 
 int main() {
     
