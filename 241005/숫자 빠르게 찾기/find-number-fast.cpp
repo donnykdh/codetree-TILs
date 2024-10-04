@@ -21,7 +21,7 @@ int Check(int target){
         }
     }
 
-    return -1;
+    return -2;
 
 }
 
