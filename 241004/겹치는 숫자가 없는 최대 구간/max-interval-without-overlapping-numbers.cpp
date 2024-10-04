@@ -4,7 +4,7 @@ using namespace std;
 
 int n;
 int arr[1000];
-int count[1000] = {};
+int count[1000];
 
 int main() {
     
