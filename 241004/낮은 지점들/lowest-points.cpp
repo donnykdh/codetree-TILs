@@ -8,7 +8,7 @@ unordered_map<int, int> hm;
 
 
 int main() {
-    int sum = 0;
+    long long sum = 0;
     cin >> n;
     for(int i = 0; i < n; i++){
         int x, y;
